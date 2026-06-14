@@ -1,2 +1,8 @@
 # IDE
 .idea
+
+# Output
+**/target/
+
+# Env
+.env
