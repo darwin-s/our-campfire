@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: our-campfire-user-service

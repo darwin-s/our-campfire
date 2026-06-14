@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:12.8-alpine'
+    environment:
+      POSTGRES_DB: user-db
+      POSTGRES_USER: ${USER_SERVICE_DB_USER:-admin}
+      POSTGRES_PASSWORD: ${USER_SERVICE_DB_PASSWORD:-nimda}
+    ports:
+      - '5432'

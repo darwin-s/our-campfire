@@ -14,10 +14,15 @@
     <groupId>com.ourcampfire</groupId>
     <artifactId>our-campfire-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>25</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <modules>
+        <module>user-service</module>
+    </modules>
 
 </project>
