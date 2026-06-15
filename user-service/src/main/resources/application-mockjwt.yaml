@@ -1,0 +1,6 @@
+mock:
+  jwt:
+    sub: "admin"
+    username: "administrator"
+    roles:
+      - MONITORING

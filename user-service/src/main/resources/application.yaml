@@ -1,3 +1,19 @@
 spring:
   application:
     name: our-campfire-user-service
+  profiles:
+    group:
+      local:
+        - "mockjwt"
+        - "debug"
+
+management:
+  server:
+    port: 8090
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metadata, prometheus
+  endpoint:
+    health:
+      show-details: when_authorized
