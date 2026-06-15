@@ -15,7 +15,7 @@ import java.util.Map;
  * Security configuration for the local profile
  */
 @Configuration
-@Profile("local")
+@Profile("mockjwt")
 public class LocalSecurityConfig {
 
     @Value("${mock.jwt.sub:admin}")
