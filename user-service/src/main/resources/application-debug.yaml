@@ -1,7 +1,7 @@
 logging:
   level:
     com.ourcampfire: trace
-    root: debug
+    root: info
 
 spring:
   jpa:
