@@ -1,6 +1,6 @@
 spring:
   application:
-    name: our-campfire-user-service
+    name: user-service
   profiles:
     group:
       local:
