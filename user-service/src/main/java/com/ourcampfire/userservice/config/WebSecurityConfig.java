@@ -1,4 +1,4 @@
-package com.ourcampfire.userservice.config.security;
+package com.ourcampfire.userservice.config;
 
 import com.ourcampfire.userservice.security.JwtRolesConverter;
 import org.springframework.context.annotation.Bean;

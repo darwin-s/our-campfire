@@ -1,4 +1,4 @@
-package com.ourcampfire.userservice.config.security;
+package com.ourcampfire.userservice.config;
 
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
