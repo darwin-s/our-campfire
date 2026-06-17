@@ -10,3 +10,5 @@ spring:
         git:
           uri: https://github.com/darwin-s/our-campfire-config
           default-label: master
+        native:
+          search-locations: file:///${CONFIG_DIR}
