@@ -1,6 +1,7 @@
 package com.ourcampfire.userservice.config.security;
 
-import org.springframework.beans.factory.annotation.Value;
+import lombok.Setter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -16,16 +17,13 @@ import java.util.Map;
  */
 @Configuration
 @Profile("mockjwt")
+@ConfigurationProperties(prefix = "mock.jwt")
+@Setter
 public class LocalSecurityConfig {
 
-    @Value("${mock.jwt.sub:admin}")
-    private String mockSub;
-
-    @Value("${mock.jwt.username:admin}")
-    private String mockUsername;
-
-    @Value("${mock.jwt.roles:}")
-    private List<String> mockRoles;
+    private String sub;
+    private String username;
+    private List<String> roles;
 
     @Bean
     public JwtDecoder mockJwtDecoder() {
@@ -36,9 +34,9 @@ public class LocalSecurityConfig {
                         Instant.now().plusSeconds(36000),
                         Map.of("alg", "none"),
                         Map.of(
-                                "sub", mockSub,
-                                "preferred_username", mockUsername,
-                                "realm_access", Map.of("roles", mockRoles)
+                                "sub", sub,
+                                "preferred_username", username,
+                                "realm_access", Map.of("roles", roles)
                         )
                 );
     }
